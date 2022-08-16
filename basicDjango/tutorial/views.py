@@ -8,7 +8,7 @@ def home(request):
 
 
 def about(request):
-    return render(request, "home.html", {"name": "Misha"})
+    return HttpResponse("Hello from About!")
     # return render(request,'home.html')
 
 

@@ -281,7 +281,7 @@
 						{% for dest in dests%}
 						<div class="destination item">
 							<div class="destination_image">
-								<img alt="" src="{{baseUrl}}/{{dest.img}}">
+								<img alt="" src="{{dest.img.url}}">
 								{% if dest.offer %}
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
 								{% endif %}
@@ -292,7 +292,7 @@
 								<div class="destination_subtitle">
 									<p>{{dest.desc}}</p>
 								</div>
-								<div class="destination_price">{{dest.price}}</div>
+								<div class="destination_price">${{dest.price}}</div>
 							</div>
 						</div>
 						{%endfor%}

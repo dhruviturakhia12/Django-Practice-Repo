@@ -7,4 +7,4 @@ class Destination(models.Model):
     img = models.ImageField()
     price = models.IntegerField()
     offer = models.BooleanField(default=False)
-    number=models.IntegerField()
+    number = models.IntegerField()
