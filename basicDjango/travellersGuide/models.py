@@ -1,10 +1,10 @@
 from django.db import models
 
 
-class Destination:
-    id: int
-    name: str
-    desc: str
-    img: str
-    price: int
-    offer: bool
+class Destination(models.Model):
+    name = models.CharField(max_length=200)
+    desc = models.TextField()
+    img = models.ImageField()
+    price = models.IntegerField()
+    offer = models.BooleanField(default=False)
+    number=models.IntegerField()
