@@ -4,11 +4,11 @@ This repository is for practicing Django from very basic and exploring its featu
 
 <h1>About Poll App</h1> 
 
-This App can create and show polls.
-You can vote on the choices and can also create your own polls.
-You can also view the total votes.
-The data of this will be stored in database(PostgreSQL).
-For further information verify below images.
+This App can create and show polls.<br>
+You can vote on the choices and can also create your own polls.<br>
+You can also view the total votes.<br>
+The data of this will be stored in database(PostgreSQL).<br>
+For further information verify below images.<br>
 
 
 ![Screenshot from 2022-08-17 17-30-51](https://user-images.githubusercontent.com/97149541/185113500-17afdd99-6d77-4d8d-b45e-134b437cbf50.png)<hr><br>
