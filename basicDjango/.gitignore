@@ -1,3 +1,9 @@
+.build/
+_build/
+.idea/
+.cache/
+venv
+.env
 # Default ignored files
 /shelf/
 /workspace.xml
