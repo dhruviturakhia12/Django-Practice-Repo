@@ -1,13 +1,13 @@
 <h1>About Repository</h1>
 
-This repository is for practicing Django from very basic and exploring its features and functionalities. It contains some dummy projects that I have created for understanding Django structure.
+This repository is for practicing Django from very basic and exploring its features and functionalities. <br>It contains some dummy projects that I have created for understanding Django structure.
 
 <h1>About Traveller's Guide App</h1> 
 
-This App can show you places to visit.
-You can also login, logout and register from the navbar.
-The data of this will be stored in database(PostgreSQL).
-For further information verify below images.
+This App can show you places to visit.<br>
+You can also login, logout and register from the navbar.<br>
+The data of this will be stored in database(PostgreSQL).<br>
+For further information verify below images.<br>
 
 ![Screenshot from 2022-08-17 17-40-54](https://user-images.githubusercontent.com/97149541/185115587-b8702541-5d79-46be-844c-8e10b0b234de.png)<hr><br>
 ![Screenshot from 2022-08-17 17-41-11](https://user-images.githubusercontent.com/97149541/185115599-c137aaad-0668-4a34-9d4b-8257a49e3e60.png)<hr><br>
