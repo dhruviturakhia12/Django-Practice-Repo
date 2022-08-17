@@ -1,6 +1,6 @@
 <h1>About Repository</h1>
 
-This repository is for practicing Django from very basic and exploring its features and functionalities. It contains some dummy projects that I have created for understanding Django structure.
+This repository is for practicing Django from very basic and exploring its features and functionalities.<br> It contains some dummy projects that I have created for understanding Django structure.
 
 <h1>About Poll App</h1> 
 
