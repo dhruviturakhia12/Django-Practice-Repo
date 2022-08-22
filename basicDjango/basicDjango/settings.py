@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "todo_list_app",
+    "accounts",
+    'widget_tweaks',
+
 ]
 
 MIDDLEWARE = [
@@ -119,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "todo_list_app/static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "assets")
 
 MEDIA_URL = "/media/"

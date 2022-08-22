@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %}Create{% endblock %}
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Create tasks</h3>
+            </div>
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="panel-body">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                            <h4><strong>Enter your task</strong></h4>
+                                 {% render_field todo.task class='form-control' %}
+                            <h4><strong>Priority</strong></h4>
+                                 {% render_field todo.roles class='form-control' %}
+                            <h4><strong>Due date</strong></h4>
+                                 {% render_field todo.due_date type="date" class='form-control' %}
+                            <br>
+                        <div class="col-lg-12 text-center">
+                            <button type="submit" class="btn btn-space">Submit</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}

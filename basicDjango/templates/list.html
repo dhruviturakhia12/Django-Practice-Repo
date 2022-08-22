@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Lists{% endblock %}
+{% block main %}
+
+<div class="row">
+    {% if todo %}
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Available tasks</h3>
+            </div>
+            <ul class="list-group">
+<!--                    {% for list in todo %};-->
+                    <li class="list-group-item">
+                        <strong>{{list.task}}</strong>
+                        <span class="pull-right">
+                            <strong style="color:red">{{list.roles}}</strong>
+                            <strong style="color:black">{{list.due_date}}</strong>
+                            <a style="color:black" href="/delete/{{list.id}}" class="btn-spacer">Delete</a>
+                        </span>
+                    </li>
+<!--                {% endfor %}-->
+            </ul>
+        </div>
+    </div>
+     {% else %}
+        <h1 style="text-align:center;" >Congratulations on completing your task</h1>
+                <h2 style="text-align:center;" >Great work, keep it up!</h2>
+                <hr />
+        <div class="col-md-12 text-center">
+                    <center><img src="../static/images.png"></center>
+                    <a href="{% url 'create' %}"  class="btn btn-space">Create</a> &nbsp;
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
