@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.contrib.auth.models import User, auth
 
 
 def logout(request):
@@ -24,7 +24,7 @@ def login(request):
 
 
 def register(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         first_name = request.POST["first_name"]
         last_name = request.POST["last_name"]
         username = request.POST["username"]
@@ -48,12 +48,11 @@ def register(request):
                 )
                 user.save()
                 print("User created")
-                return redirect("login")
-
+                return redirect("/")
         else:
             messages.info(request, "Password not matching")
             return redirect("register")
-        # return redirect("/")
+        return redirect("/")
 
     else:
         return render(request, "register.html")
