@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title%}Signup{% endblock %}
+
+{% block main%}
+<h2>This is Signup page.</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+        <input type="text" name="first_name" placeholder="First Name"><br>
+        <input type="text" name="last_name" placeholder="Last Name"><br>
+        <input type="text" name="username" placeholder="User name"><br>
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="number" name="age" placeholder="Age"><br>
+        <input type="text" name="about" placeholder="About"><br>
+        <input type="date" name="birth_date" placeholder="Birth Date"><br>
+        <input type="password" name="password1" placeholder="Password"><br>
+        <input type="password" name="password2" placeholder="Confirm Password"><br>
+        <button type="submit">Signup</button>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+</form>
+{% endblock %}
