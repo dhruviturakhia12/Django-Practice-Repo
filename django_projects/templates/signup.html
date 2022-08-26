@@ -3,20 +3,26 @@
 {% block title%}Signup{% endblock %}
 
 {% block main%}
-<h2>This is Signup page.</h2>
+<style>
+.btn, .input{
+padding:10px 50px;
+margin: 5px;
+font-size:20px
+</style>
+<h2>Please Signup:</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p}}
-        <input type="text" name="first_name" placeholder="First Name"><br>
-        <input type="text" name="last_name" placeholder="Last Name"><br>
-        <input type="text" name="username" placeholder="User name"><br>
-        <input type="email" name="email" placeholder="Email"><br>
-        <input type="number" name="age" placeholder="Age"><br>
-        <input type="text" name="about" placeholder="About"><br>
-        <input type="date" name="birth_date" placeholder="Birth Date"><br>
-        <input type="password" name="password1" placeholder="Password"><br>
-        <input type="password" name="password2" placeholder="Confirm Password"><br>
-        <button type="submit">Signup</button>
+        <input type="text" name="first_name" class="input" placeholder="First Name"><br>
+        <input type="text" name="last_name" class="input" placeholder="Last Name"><br>
+        <input type="text" name="username" class="input" placeholder="User name"><br>
+        <input type="email" name="email" class="input" placeholder="Email"><br>
+        <input type="number" name="age"class="input"  placeholder="Age"><br>
+        <input type="text" name="about" class="input" placeholder="About"><br>
+        <input type="password" name="password1" class="input" placeholder="Password"><br>
+        <input type="password" name="password2" class="input" placeholder="Confirm Password"><br>
+        <input type="date" name="birth_date" class="input" placeholder="Birth Date"><br>
+        <button type="submit" class="btn">Signup</button>
         {% for message in messages %}
         <h3>{{message}}</h3>
         {% endfor %}

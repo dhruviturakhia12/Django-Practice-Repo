@@ -5,16 +5,22 @@
 {% block main%}
 {% if user.is_authenticated %}
 <h2>Welcome, <strong>{{user.first_name}}</strong></h2>
+<button type="submit" class="btn" onclick="location.href = 'logout/'" >Logout</button>
 {% for people in NewUser %}
 <h4>{{people.user_name}}</h4>
 {% endfor %}
 {% else %}
-<h2><strong>Welcome user, please log in!</strong></h2>
-<button type="submit" onclick="location.href = 'signup/'" >Signup</button>
-<button type="submit" onclick="location.href = 'login/'">Login</button>
+<h2>Welcome user, please log in!</h2>
+<button type="submit" class="btn" onclick="location.href = 'signup/'" >Signup</button>
+<button type="submit" class="btn" onclick="location.href = 'login/'">Login</button>
 {% endif %}
 <h4><strong>Total users registered: {{count}}</strong></h4><br>
 <style>
+.btn{
+padding:10px 50px;
+margin: 5px;
+font-size:20px
+}
 table,th,td {
   border:1px solid black;
   text-align: center;
@@ -27,7 +33,7 @@ tr:nth-child(even) {
 </style>
 <table>
     <tr>
-      <th><strong>#</strong></th>
+      <th><strong></strong></th>
       <th><strong>User ID</strong></th>
       <th><strong>First Name</strong></th>
       <th><strong>Last Name</strong></th>

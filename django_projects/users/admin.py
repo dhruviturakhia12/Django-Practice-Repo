@@ -6,7 +6,7 @@ from django.forms import Textarea
 
 class UserAdminConfig(UserAdmin):
     search_fields = ('email', 'user_name', 'first_name','last_name')
-    list_filter = ('email', 'user_name', 'first_name','last_name', 'is_active', 'is_staff')
+    list_filter = ('email', 'user_name', 'first_name','last_name',)
     ordering = ('-start_date',)
     list_display = ('email', 'user_name', 'first_name','last_name',
                     'is_active', 'is_staff')
@@ -19,7 +19,7 @@ class UserAdminConfig(UserAdmin):
         (None, {
             'classes': ('wide',),
             'fields': (
-                'email', 'user_name', 'first_name', 'password1', 'password2', 'is_active', 'is_staff', 'about', 'age',
+                'email', 'user_name', 'first_name','last_name', 'password1', 'password2', 'is_active', 'is_staff', 'about', 'age',
                 'birth_date')}
          ),
     )
