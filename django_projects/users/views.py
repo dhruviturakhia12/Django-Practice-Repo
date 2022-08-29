@@ -5,15 +5,27 @@ from .models import NewUser
 
 
 def home(request):
-    total = NewUser.objects.all()
-    count = NewUser.objects.count()
-    context = {"count": count,"total":total}
-    return render(request, "home.html",context)
+    return render(request, "home.html")
 
 
 def logout(request):
     auth.logout(request)
     return redirect("home")
+
+
+def users(request):
+    total = NewUser.objects.all()
+    count = NewUser.objects.count()
+    context = {"count": count, "total": total}
+    return render(request, "users.html", context)
+
+
+
+def details(request, user_id):
+    total = NewUser.objects.all()
+    user_detail = NewUser.objects.get(pk=user_id)
+    context = {"user_detail": user_detail, "total": total}
+    return render(request, "userdetail.html", context)
 
 
 def password(request):
