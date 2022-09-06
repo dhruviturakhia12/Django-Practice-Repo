@@ -1,5 +1,5 @@
 from django.contrib import admin
-from users.models import NewUser
+from .models import NewUser,ExistingUser
 from django.contrib.auth.admin import UserAdmin
 from django.forms import Textarea
 
@@ -26,3 +26,4 @@ class UserAdminConfig(UserAdmin):
 
 
 admin.site.register(NewUser, UserAdminConfig)
+admin.site.register(ExistingUser)

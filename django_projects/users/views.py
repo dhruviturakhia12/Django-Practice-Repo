@@ -6,7 +6,9 @@ from django.core.mail import EmailMessage
 
 
 def home(request):
-    return render(request, "home.html")
+    data = NewUser.objects.earliest('first_name')
+    print("--------",data)
+    return render(request, "home.html", {"users": data})
 
 
 def logout(request):
@@ -64,10 +66,12 @@ def signup(request):
                 user.is_active = False
                 user.save()
                 email_subject = "🙌 Welcome to My site! Let’s get started."
-                email_body = "\nYou’ve joined a network of 50 million people who are gathering over shared " \
-                             "interests.\n \n " \
-                             "Do more of what you love and find your community along the way.\n \nGo to this link and " \
-                             "login to your account: http://127.0.0.1:8000/login/ \n"
+                email_body = (
+                    "\nYou’ve joined a network of 50 million people who are gathering over shared "
+                    "interests.\n \n "
+                    "Do more of what you love and find your community along the way.\n \nGo to this link and "
+                    "login to your account: http://127.0.0.1:8000/login/ \n"
+                )
                 email = EmailMessage(
                     email_subject,
                     email_body,

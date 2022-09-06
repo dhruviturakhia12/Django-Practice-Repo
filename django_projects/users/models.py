@@ -54,3 +54,12 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.user_name
+
+
+class ExistingUser(models.Model):
+    email = models.EmailField(_("email address"), unique=True)
+    user_name = models.CharField(max_length=100, unique=True)
+    first_name = models.CharField(max_length=100, blank=True)
+    last_name = models.CharField(max_length=100, blank=True)
+    USERNAME_FIELD = "user_name"
+
