@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block main %}
+
+<div class="container">
+    <div class="col-lg-12 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading bg-info text-white ">
+                <h3 class="ml-3">Add new item</h3>
+            </div>
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="panel-body ml-3 mr-3">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="item">Enter Item</label>
+                                <input type="text" name="item" id="item" class="form-control" placeholder="Enter:" />
+                                 {% render_field form.item class='form-control' rows=1 %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="carbohydrates">Carbohydrates</label>
+                                <input type="text" name="carbohydrates" id="carbohydrates" class="form-control" placeholder="Enter:" />
+                                 {% render_field form.carbohydrates class='form-control' rows=1 %}
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="proteins">Proteins</label>
+                                <input type="text" name="proteins" id="proteins" class="form-control" placeholder="Enter:" />
+                                 {% render_field form.proteins class='form-control' rows=1 %}
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="fats">Fats</label>
+                                <input type="text" name="fats" id="fats" class="form-control" placeholder="Enter:" />
+                                 {% render_field form.fats class='form-control' rows=1 %}
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="calories">Calories</label>
+                                 <input type="text" name="calories" id="calories" class="form-control" placeholder="Enter:" />
+                                 {% render_field form.calories class='form-control' rows=1 %}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <hr />
+                        <div class="col-lg-7 mb-3">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<style>
+.form-control,.btn, .panel {
+    border-radius: 0;
+}
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: rgba(245, 245, 220, .7);
+    border-color: rgba(245, 245, 220, .6);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.panel-footer {
+    background-color: rgba(245, 245, 220, .5);
+    border-color: rgba(245, 245, 220, .4);
+}
+.panel {
+    box-shadow: 0px 3px 3px 0px #ddd;
+}
+.panel-title {
+    font-weight: bolder;
+}
+.btn{
+padding:10px 25px;
+}
+</style>
+{% endblock %}
+

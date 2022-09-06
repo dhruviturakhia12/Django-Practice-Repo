@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="row">
+            <div class="col-md-12 navbar-dark bg-info">
+                <nav class="  ml-3 ">
+                    <a href="{% url 'home' %}" class="navbar-brand">Calorie Tracker</a>
+                    <a href="{% url 'add' %}" class="navbar-brand">Add item</a>
+
+                </nav>
+            </div>
+        </div>
+
+        <br><br>
+           {% block main %}{% endblock %}
+
+    </div>
+</body>
+</html>
